@@ -1,4 +1,6 @@
 Pillow
+face_recognition
+cmake
 dlib==19.24.0
 opencv-python
 whatimage

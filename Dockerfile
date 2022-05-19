@@ -13,8 +13,10 @@ COPY  . /home/jovyan/work
 
 COPY --chown=${NB_UID}:${NB_GID} requirements.txt /tmp/
 #RUN  pip install dlib
-#RUN pip install dlib==19.14.0
-#RUN pip install --quiet --no-cache-dir --requirement /tmp/requirements.txt 
+RUN pip install cmake
+RUN python3 -m pip install dlib==19.14.0
+#RUN  pip install --quiet --no-cache-dir --requirement /tmp/requirements.txt 
 
 ENV JUPYTER_ENABLE_LAB=yes
-ENV NotebookApp.token=''
+ENV NotebookApp.token='' 
+ARG NotebookApp.token=''
