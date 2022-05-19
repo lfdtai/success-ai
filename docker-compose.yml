@@ -1,0 +1,12 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  notebookweb:
+    build: .
+    
+    ports:
+      - "8888:8888"
+    volumes:
+      - workvol:/home/jovyan/work
+    restart: always
+volumes:
+  workvol:
